@@ -18,8 +18,8 @@ variable "resource_group_names" {
 variable "storage_accounts" {
   description = "A map of storage account configurations."
   type = map(object({
-    location               = string
-    account_tier           = string
+    location                 = string
+    account_tier             = string
     account_replication_type = string
   }))
   default = {
