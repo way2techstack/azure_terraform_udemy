@@ -8,28 +8,29 @@ variable "resource_group_names" {
   description = "A list of resource group names to create."
   type        = map(string)
   default = {
-    "webapp-dev"      = "West US"
-    "containers-dev"  = "West US"
-    "webapp-prod"     = "East US"
-    "containers-prod" = "East US"
+    "webapp-dev"  = "West US"
+    "webapp-prod" = "West US"
   }
 }
 
 variable "storage_accounts" {
   description = "A map of storage account configurations."
   type = map(object({
+    name                     = string
     location                 = string
     account_tier             = string
     account_replication_type = string
   }))
   default = {
-    "storagewebprod" = {
+    "webapp-dev" = {
+      name                     = "storagewebdev"
       location                 = "West US"
       account_tier             = "Standard"
       account_replication_type = "GRS"
     },
-    "storagewebdev" = {
-      location                 = "East US"
+    "webapp-prod" = {
+      name                     = "way2techstackprod"
+      location                 = "West US"
       account_tier             = "Standard"
       account_replication_type = "LRS"
     }
