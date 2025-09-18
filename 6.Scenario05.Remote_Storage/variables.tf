@@ -23,7 +23,7 @@ variable "storage_accounts" {
   }))
   default = {
     "webapp-dev" = {
-      name                     = "storagewebdev"
+      name                     = "way2techstackdev"
       location                 = "West US"
       account_tier             = "Standard"
       account_replication_type = "GRS"
