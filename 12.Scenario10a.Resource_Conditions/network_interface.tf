@@ -5,7 +5,7 @@ resource "random_string" "suffix_vm" {
 }
 
 resource "azurerm_network_interface" "vm_nic" {
-  count               = 2
+  count               = 1
   name                = "linux_vm_nic_${random_string.suffix_vm.id}"
   location            = azurerm_resource_group.ado_group.location
   resource_group_name = azurerm_resource_group.ado_group.name
