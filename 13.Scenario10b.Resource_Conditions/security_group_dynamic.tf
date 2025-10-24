@@ -1,4 +1,4 @@
-resource "azurerm_network_security_group" "example_nsg_static" {
+resource "azurerm_network_security_group" "nsg_static" {
   name                = "way2techstack-nsg"
   location            = azurerm_resource_group.ado_group.location
   resource_group_name = azurerm_resource_group.ado_group.name

@@ -30,8 +30,8 @@ variable "public_subnet_address" {
   description = "Provide name and CIDR for subnets creation"
   type        = map(list(string))
   default = {
-    "PublicSubnet01" = ["10.20.0.0/26"]
-    "PublicSubnet02" = ["10.20.2.0/26"]
+    "PublicSubnet01" = ["10.20.0.0/24"]
+    "PublicSubnet02" = ["10.20.2.0/24"]
   }
 }
 

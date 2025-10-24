@@ -7,8 +7,8 @@ resource "azurerm_subnet" "public_subnets" {
   default_outbound_access_enabled = true # Default value true
 
   lifecycle {
-    postcondition {
-      condition     = element(split("/", self.address_prefixes[0]), 1) == "24"
+    precondition {
+      condition     = element(split("/", each.value[0]), 1) == "24"
       error_message = "Subnets for VNet CIDR address is not matching with expected value, /24"
     }
   }
