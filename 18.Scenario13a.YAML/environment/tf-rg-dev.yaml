@@ -1,0 +1,17 @@
+# Mappings (dictionaries)
+resource_groups:
+  w2tech01:
+    location: westus
+    tags:
+      environment: development
+      name: way2techstack01
+  w2tech02:
+    location: westus
+    tags:
+      environment: development
+      name: way2techstack02
+  w2tech03:
+    location: westus
+    tags:
+      environment: development
+      name: way2techstack03
